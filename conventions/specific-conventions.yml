@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.specific.dev
+summary: >-
+  Specific is a CLI- and config-driven infrastructure platform, not a documented REST API, so its
+  cross-cutting conventions are about the configuration model, agent onboarding, auth and
+  observability rather than HTTP request/response semantics.
+configuration:
+  format: HCL
+  file: specific.hcl
+  validation: specific check
+  note: A single specific.hcl declares services, databases, storage, caching, sync, workflows, crons, secrets, domains and environments.
+authentication:
+  style: oauth2
+  provider: WorkOS AuthKit
+  flows: [authorizationCode, deviceCode]
+  ref: authentication/specific-authentication.yml
+agent_onboarding:
+  init: specific init
+  docs: specific docs
+  check: specific check
+  mcp: https://docs.specific.dev/mcp
+  plugin: https://github.com/specific-dev/plugin
+environments:
+  local: specific dev
+  production: specific deploy
+  previews: Temporary, fully isolated copies of an environment with real data.
+observability:
+  interface: SQL
+  command: specific query
+  note: Logs, traces and runtime metrics are queried with ad-hoc SQL.
+idempotency:
+  supported: false
+  note: No idempotency-key contract is documented (platform is CLI/config-driven, not a public write API). Idempotency pointer intentionally not emitted.
+pagination:
+  documented: false
+notes: >-
+  Cross-links — auth: authentication/specific-authentication.yml; lifecycle:
+  lifecycle/specific-lifecycle.yml; CLI: cli/specific-cli.yml.

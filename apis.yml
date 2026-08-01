@@ -1,7 +1,14 @@
 aid: specific
 name: Specific
-description: Specific is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Specific is an infrastructure-as-code platform built for coding agents, positioned as "AWS for
+  coding agents." Any coding agent (Claude Code, Cursor, Codex) defines its whole system in a single
+  specific.hcl file — services, managed Postgres, S3-compatible object storage, Redis, real-time
+  Postgres sync (powered by Electric), Temporal workflows, crons, secrets, volumes, custom domains,
+  preview environments and environments — then runs it locally with `specific dev` and ships it to
+  production with `specific deploy`. Everything is reached through the Specific CLI and a hosted docs
+  MCP server rather than proprietary SDKs, so agents can build backends from natural-language prompts
+  and deploy production infrastructure in minutes.
 url: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +16,103 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://specific.dev/opengraph-image?2b9073564a4e0222
 tags:
 - Company
-apis: []
+- Infrastructure
+- Infrastructure as Code
+- Platform as a Service
+- Backend as a Service
+- Coding Agents
+- Deployment
+- PostgreSQL
+- Developer Tools
+- Cloud
+- CLI
+- MCP
+apis:
+- name: Specific Platform
+  description: >-
+    The Specific control plane and CLI that builds, deploys and runs agent-defined infrastructure
+    from a single specific.hcl file, spanning local development and production on Specific Cloud.
+  humanURL: https://docs.specific.dev
+  baseURL: https://api.specific.dev
+  tags:
+  - Infrastructure as Code
+  - Deployment
+  - PostgreSQL
+  properties:
+  - type: Documentation
+    url: https://docs.specific.dev
+  - type: GettingStarted
+    url: https://docs.specific.dev/quickstart
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
+common:
+- type: Website
+  url: https://specific.dev
+- type: DeveloperPortal
+  url: https://docs.specific.dev
+- type: Documentation
+  url: https://docs.specific.dev
+- type: GettingStarted
+  url: https://docs.specific.dev/quickstart
+- type: Blog
+  url: https://specific.dev/blog
+- type: Pricing
+  url: https://specific.dev/pricing
+- type: SignUp
+  url: https://dashboard.specific.dev
+- type: Login
+  url: https://dashboard.specific.dev
+- type: GitHubOrganization
+  url: https://github.com/specific-dev
+- type: ChangeLog
+  url: https://specific.dev/changelog
+- type: Packages
+  url: packages/specific-packages.yml
+- type: SDKs
+  url: packages/specific-packages.yml
+- type: CLI
+  url: cli/specific-cli.yml
+- type: MCPServer
+  url: mcp/specific-mcp.yml
+- type: LLMsTxt
+  url: llms/specific-llms.txt
+- type: ChangeLog
+  url: changelog/specific-changelog.yml
+- type: Authentication
+  url: authentication/specific-authentication.yml
+- type: Conventions
+  url: conventions/specific-conventions.yml
+- type: Lifecycle
+  url: lifecycle/specific-lifecycle.yml
+- type: WellKnown
+  url: well-known/specific-well-known.yml
+- type: DomainSecurity
+  url: security/specific-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml

@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+hosts:
+- host: https://specific.dev
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+- host: https://docs.specific.dev
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 200
+    note: Saved verbatim to llms/specific-llms.txt.
+  - path: /mcp
+    status: 200
+    note: Hosted documentation MCP server (see mcp/specific-mcp.yml).
+- host: https://dashboard.specific.dev
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 307
+    note: Redirects into WorkOS AuthKit (api.workos.com/user_management/authorize) — OAuth via WorkOS.
+notes: >-
+  No self-hosted OIDC/OAuth discovery, security.txt, api-catalog or ai-plugin.json documents are
+  published. Identity is delegated to WorkOS AuthKit. No raw well-known files were saved because none
+  returned a first-party 200 discovery document.

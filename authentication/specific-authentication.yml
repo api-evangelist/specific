@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.specific.dev/coding-agents
+summary:
+  types: [oauth2]
+  identity_provider: WorkOS AuthKit
+  api_key_in: []
+  oauth2_flows: [authorizationCode, deviceCode]
+schemes:
+- name: WorkOS AuthKit (browser)
+  type: oauth2
+  flow: authorizationCode
+  authorization_endpoint: https://api.workos.com/user_management/authorize
+  pkce: true
+  evidence: >-
+    dashboard.specific.dev/.well-known/openid-configuration redirects into WorkOS AuthKit
+    (api.workos.com/user_management/authorize) with PKCE (code_challenge_method=S256).
+- name: Device code login
+  type: oauth2
+  flow: deviceCode
+  command: specific login --device-code
+  evidence: >-
+    Docs describe a device-code login flow for headless/remote agent environments; the CLI prints an
+    authorization code the agent completes without a browser.
+notes: >-
+  Specific is account/session-authenticated through the CLI (`specific login`) backed by WorkOS
+  AuthKit OAuth; no static API keys are documented. There is no published OpenAPI declaring security
+  schemes, so this profile was searched from the docs and the live OIDC discovery redirect rather than
+  derived.

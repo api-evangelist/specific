@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://specific.dev/changelog
+scheme: date-based
+current: '2026-07-10'
+entries:
+- date: '2026-07-10'
+  highlights: >-
+    Deployment diagnostics and workflow improvements — agents can inspect deployment failures from
+    the CLI with more visibility into build outputs; dashboard adds consolidated cron views and
+    multi-workflow termination.
+  breaking: false
+- date: '2026-06-28'
+  highlights: >-
+    Database query capabilities and preview-environment controls — read-only `specific query` against
+    Postgres for debugging; per-service compute sizing and volume-reset commands for previews.
+  breaking: false
+- date: '2026-06-13'
+  highlights: >-
+    Service console and volume management for preview environments — interactive shell access into
+    running containers and copy-on-write clones of service volumes.
+  breaking: false
+- date: '2026-06-09'
+  highlights: >-
+    Scheduled jobs and domain management — define cron blocks in specific.hcl; Domain Connect
+    integration simplifies custom-domain setup.
+  breaking: false
+- date: '2026-06-02'
+  highlights: >-
+    Project health monitoring — the dashboard flags unhealthy projects in the sidebar with per-service
+    issue visibility across environments.
+  breaking: false
+- date: '2026-05-25'
+  highlights: >-
+    Production debugging — `specific query` fires ad-hoc SQL against live logs, traces, and runtime
+    metrics.
+  breaking: false

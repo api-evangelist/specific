@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/package/@specific.dev/cli
+packages:
+- language: javascript
+  registry: npm
+  name: "@specific.dev/cli"
+  url: https://www.npmjs.com/package/@specific.dev/cli
+  install: npm install -g @specific.dev/cli
+  version: 0.1.188
+  bin: specific
+  official: true
+  note: Official Specific CLI (also installable via curl -fsSL https://specific.dev/install.sh | sh; binaries at https://binaries.specific.dev/cli).
+- language: typescript
+  registry: github
+  name: replacebase
+  url: https://github.com/specific-dev/replacebase
+  install: see repository
+  license: MIT
+  official: true
+  note: First-party TypeScript library to help migrate away from Supabase.
+- language: multi
+  registry: github
+  name: specific plugin (Open Plugins standard)
+  url: https://github.com/specific-dev/plugin
+  install: see repository
+  license: MIT
+  official: true
+  note: First-party coding-agent plugin (Skills, Rules, Commands) for Cursor, Claude Code and similar tools.
+- language: shell
+  registry: github
+  name: action
+  url: https://github.com/specific-dev/action
+  install: see repository
+  official: true
+  note: First-party GitHub Action for deploying with Specific.

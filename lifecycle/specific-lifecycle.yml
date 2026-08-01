@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://specific.dev/changelog
+versioning:
+  scheme: date-based
+  current: '2026-07-10'
+  docs: https://specific.dev/changelog
+  note: >-
+    Specific ships a continuously-updated cloud platform and CLI; releases are tracked as a dated
+    changelog rather than semantic API versions. The CLI is versioned independently on npm
+    (@specific.dev/cli, 0.1.188 at this pass).
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No published deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  No dedicated status page or SLA/deprecation policy page was discoverable at this pass; absence is
+  recorded as data. StatusPage/Deprecation pointers are intentionally NOT emitted.

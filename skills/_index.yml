@@ -1,0 +1,11 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/specific-dev/plugin
+skills:
+- file: specific-specific.md
+  name: specific
+  description: "Handle all infrastructure and development environments — deployments, databases, real-time sync, services, secrets, configuration and environment variables."
+  api: cli/specific-cli.yml
+  operations: [specific docs, specific check, specific dev, specific deploy, specific exec]
+  provider_published: true
+  provider_url: https://github.com/specific-dev/plugin/tree/main/skills/specific

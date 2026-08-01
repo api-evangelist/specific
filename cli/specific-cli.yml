@@ -1,0 +1,71 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.specific.dev/reference/cli
+name: specific
+description: >-
+  The Specific CLI is the primary interface to the platform. Coding agents and developers use it to
+  configure a project, run the full system locally, and deploy to Specific Cloud from a single
+  specific.hcl file.
+install:
+- method: curl
+  command: curl -fsSL https://specific.dev/install.sh | sh
+- method: npm
+  command: npm install -g @specific.dev/cli
+binary: specific
+config_file: specific.hcl
+command_groups:
+- group: setup
+  commands:
+  - name: specific init
+    purpose: Configure the project for coding agents (adds agent instructions/permissions).
+  - name: specific docs
+    purpose: Fetch LLM-optimized documentation (optionally by topic).
+  - name: specific check
+    purpose: Validate the specific.hcl configuration.
+- group: local-development
+  commands:
+  - name: specific dev
+    purpose: Start the local development environment with all resources (Postgres, sync, etc.).
+  - name: specific exec
+    purpose: Run a one-off command with a service's environment variables.
+  - name: specific psql
+    purpose: Connect to local Postgres interactively.
+  - name: specific reshape
+    purpose: Manage zero-downtime database schema migrations.
+  - name: specific clean
+    purpose: Remove local development data.
+- group: deploy-and-manage
+  commands:
+  - name: specific deploy
+    purpose: Deploy to Specific Cloud.
+  - name: specific status
+    purpose: Show project and deployment status.
+  - name: specific deployment
+    purpose: "Inspect deployments (subcommand: show)."
+  - name: specific query
+    purpose: Run SQL queries against observability data or databases.
+  - name: specific domain
+    purpose: "Manage custom domains (subcommand: add)."
+  - name: specific project
+    purpose: "Manage projects (subcommands: new, list)."
+- group: account
+  commands:
+  - name: specific login
+    purpose: Authenticate to Specific (supports --device-code for headless/agent use).
+  - name: specific logout
+    purpose: Log out.
+  - name: specific update
+    purpose: Update the CLI to the latest version.
+  - name: specific beta
+    purpose: Manage beta feature flags.
+key_flags:
+- flag: -k, --key
+  purpose: Dev environment namespace.
+- flag: -e, --environment
+  purpose: Target environment.
+- flag: --format
+  purpose: Output formatting.
+key_flows:
+- "Agent onboarding via `specific init` then `specific docs` / `specific check`."
+- "Local-to-production loop: `specific dev` then `specific deploy`."
+- "Headless agent auth via `specific login --device-code`."

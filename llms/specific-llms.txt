@@ -1,0 +1,59 @@
+# Specific Docs
+
+> Specific enables any coding agent to define infrastructure for the code it writes. Start building locally and deploy to production in minutes.
+
+## Get started
+
+- [Welcome](https://docs.specific.dev/): Specific enables any coding agent to define infrastructure for the code it writes. This lets you start building locally and deploy to production in minutes.
+- [Quickstart](https://docs.specific.dev/quickstart): Let your agent set everything up, or go from local dev to deployed yourself in about five minutes.
+- [Installation](https://docs.specific.dev/installation): Install the Specific CLI and prepare your project.
+- [Coding agents](https://docs.specific.dev/coding-agents): Give your coding agent everything it needs to build and deploy with Specific.
+- [Why Specific?](https://docs.specific.dev/why-specific): The case for agent-first infrastructure.
+
+## Guides
+
+- [Services](https://docs.specific.dev/guides/services): Define how your code runs and how it connects to everything else, in development and production.
+- [Builds](https://docs.specific.dev/guides/builds): Define how your code is built: managed base environments or custom Dockerfiles.
+- [Crons](https://docs.specific.dev/guides/crons): Scheduled jobs with tracked runs, logs, and metrics.
+- [Secrets and config](https://docs.specific.dev/guides/secrets-and-config): Parameterize sensitive and environment-specific values without hardcoding them.
+- [Postgres](https://docs.specific.dev/guides/postgres): Managed PostgreSQL databases, locally and in production.
+- [Reshape migrations](https://docs.specific.dev/guides/reshape): Zero-downtime database schema migrations, managed automatically.
+- [Real-time sync](https://docs.specific.dev/guides/sync): Stream Postgres changes to clients over HTTP, powered by Electric.
+- [Object storage](https://docs.specific.dev/guides/storage): S3-compatible object storage that works with any S3 client.
+- [Redis](https://docs.specific.dev/guides/redis): Managed Redis-compatible caching, backed by Valkey.
+- [Volumes](https://docs.specific.dev/guides/volumes): Persistent directories that survive deploys and restarts.
+- [Temporal](https://docs.specific.dev/guides/temporal): Managed Temporal workflow engines for durable workflows and background tasks.
+- [Custom domains](https://docs.specific.dev/guides/domains): Serve your services from domains you own, with automatic TLS.
+- [Preview environments](https://docs.specific.dev/guides/previews): Temporary, fully isolated copies of an environment, with real data.
+- [Observability](https://docs.specific.dev/guides/observability): Query your environments' logs and metrics with SQL.
+- [Jobs](https://docs.specific.dev/guides/jobs): Run one-off commands against a deployed service in production.
+
+## Concepts
+
+- [How Specific works](https://docs.specific.dev/concepts/how-it-works): The mental model: one config file that runs your whole system, locally and in production.
+- [Local development](https://docs.specific.dev/concepts/local-development): Run your complete system locally with a single command.
+- [Deployments](https://docs.specific.dev/concepts/deployments): From source code to a running production environment in one command.
+- [Dashboard](https://docs.specific.dev/concepts/dashboard): Observe and manage your deployed projects, with a local counterpart during development.
+
+## Reference
+
+- [CLI reference](https://docs.specific.dev/reference/cli): Every command in the Specific CLI, grouped by workflow.
+
+## Compare
+
+- [Specific vs Terraform](https://docs.specific.dev/compare/terraform)
+- [Specific vs Supabase](https://docs.specific.dev/compare/supabase)
+- [Specific vs Convex](https://docs.specific.dev/compare/convex)
+- [Specific vs Vercel](https://docs.specific.dev/compare/vercel)
+
+## Examples
+
+- [Hello World](https://docs.specific.dev/examples/hello-world): A minimal Node.js HTTP server demonstrating the basics of deploying a service with Specific.
+- [Database](https://docs.specific.dev/examples/database): A simple Node.js notes API demonstrating PostgreSQL database persistence with Specific.
+- [Database with Sync](https://docs.specific.dev/examples/database-with-sync): A minimal Node.js app demonstrating real-time sync across multiple clients using Specific's PostgreSQL sync engine.
+- [Cache](https://docs.specific.dev/examples/cache): A simple Node.js page counter demonstrating how to use Redis caching with Specific.
+- [Object Storage](https://docs.specific.dev/examples/object-storage): A simple Node.js file uploader demonstrating how to work with a S3-compatible object storage in Specific.
+- [Microservices](https://docs.specific.dev/examples/microservices): A demonstration of how multiple services can communicate with each other using Specific's service reference syntax.
+- [Secrets and Configs](https://docs.specific.dev/examples/secrets-and-configs): A simple example demonstrating how to use secrets and configs in Specific for managing sensitive and non-sensitive configuration.
+- [Durable Workflows](https://docs.specific.dev/examples/durable-workflows): A task queue application demonstrating how to use Temporal for durable workflows, with a local Temporal server in development and Temporal Cloud in production.
+- [Deploy Blume with Specific](https://docs.specific.dev/examples/blume): Run a Blume documentation site locally and deploy its Node server with Specific.
