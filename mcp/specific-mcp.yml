@@ -6,16 +6,19 @@ server:
   name: specific-docs
   transport: http
   url: https://docs.specific.dev/mcp
-  description: >-
-    Official hosted MCP server that lets coding agents search and read the Specific documentation
+  description: Official hosted MCP server that lets coding agents search and read the Specific documentation
     directly. Install commands are published for Claude Code, Cursor, Codex, and VS Code.
 tools:
 - name: search_docs
   description: Search the Specific documentation (capability advertised by the docs MCP server).
 - name: read_doc
   description: Read a Specific documentation page directly.
-notes: >-
-  This is a documentation MCP server. Beyond it, Specific's primary agent surface is the `specific`
-  CLI (specific init / docs / check / dev / deploy) plus the Open Plugins-standard plugin at
-  https://github.com/specific-dev/plugin. Specific does not publish an OpenAPI-backed control-plane
-  MCP server as of this pass.
+notes: This is a documentation MCP server. Beyond it, Specific's primary agent surface is the `specific`
+  CLI (specific init / docs / check / dev / deploy) plus the Open Plugins-standard plugin at https://github.com/specific-dev/plugin.
+  Specific does not publish an OpenAPI-backed control-plane MCP server as of this pass.
+deployment:
+  mode: remote
+  verified: searched
+  tools: 2
+  checked: '2026-08-12'
+  source: catalog MCP census
